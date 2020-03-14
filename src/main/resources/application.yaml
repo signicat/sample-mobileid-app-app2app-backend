@@ -1,0 +1,35 @@
+info:
+  app:
+    name: Sample App Server
+    version: 1.0.0
+
+# Tell Spring Security (if used) to require requests over HTTPS
+security:
+  require-ssl: false
+# NOTE ssl is set to false for testing purpose only. For production code, it should be enabled!
+
+server:
+  port: 8089
+  url: "http://localhost:8089"
+  servlet:
+    session:
+      timeout: 300
+    context-path: ""
+  compression:
+    enabled: true
+
+spring:
+  devtools:
+    livereload:
+      enabled: false
+
+oidc:
+  oidcBase: "https://beta.signicat.com/oidc/"
+  clientId: "beta.signicat.sampleapp"
+  scope: "openid+profile+mobileid"
+# TODO: Change to YOUR redirect URI
+  redirectUri: "http://192.168.10.116:8089/consumeOidc"
+  acrValues: "urn:signicat:oidc:method:"
+  regMethod: "mobileid-app-app2app-reg"
+  authMethod: "mobileid-app-app2app-auth"
+  cred64: "Get it from Signicat"

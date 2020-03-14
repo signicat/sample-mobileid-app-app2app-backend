@@ -1,0 +1,19 @@
+
+body {
+	background-color:#dee4e6;
+	width:720px;
+	font-family: "Helvetica", "Times New Roman", Times, serif;
+	font-size:14px;
+	margin-left: 20px;
+	color:#253942;
+}
+
+.info {
+	background-color:#e8e1ca;
+	border-width:1px;
+	border-color:gray;
+	border-style:solid;
+	padding:10px;
+	margin-bottom: 10px;
+}
+
