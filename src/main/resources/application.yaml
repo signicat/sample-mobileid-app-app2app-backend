@@ -28,7 +28,8 @@ oidc:
   clientId: "beta.signicat.sampleapp"
   scope: "openid+profile+mobileid"
 # TODO: Change to YOUR redirect URI
-  redirectUri: "http://192.168.10.116:8089/consumeOidc"
+# Note! This redirect_uri has to be configured on Signicat side
+  redirectUri: "http://<Customer_Callback_Server_IP>:<PORT as specified above server:port>/consumeOidc"
   acrValues: "urn:signicat:oidc:method:"
   regMethod: "mobileid-app-app2app-reg"
   authMethod: "mobileid-app-app2app-auth"
